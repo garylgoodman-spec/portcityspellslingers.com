@@ -1,12 +1,17 @@
-PORT CITY SPELLSLINGERS — GITHUB FLAT VERSION v1.0
+PORT CITY SPELL FEST — VENDOR REGISTRATION UPDATE v1.1
 
-Upload ALL files directly to the root of your GitHub Pages repository (same folder, no subdirectories).
-Enable GitHub Pages: Settings > Pages > Deploy from branch > main / (root).
+Upload index.html, vendors.html, style.css, and script.js to the ROOT of the existing GitHub Pages repository, replacing the existing files when prompted. Keep existing logo.png, favicon.png, and all other files unchanged.
 
-BEFORE LAUNCH:
-1. Replace [EVENT DATE], [EVENT TIME], [VENUE NAME], and [VENUE ADDRESS] in index.html.
-2. Replace REPLACE_WITH_EMAIL@example.com with your actual email.
-3. Confirm admission, door prizes, monthly cadence, five games, and any supervised activities are accurate.
-4. The Get Tickets button currently leads to the admission section; replace with a real ticket URL only when available.
-5. The hero uses a gradient instead of the Wilmington harbor photograph because the screenshot does not supply the original photo. Add an appropriately licensed image as hero.jpg, then add url("hero.jpg") to the .hero background CSS if desired.
-6. No backend or forms are required; works on free GitHub Pages hosting.
+New page: vendors.html
+Form action: https://formspree.io/f/xrperldy
+Notification email (configured in Formspree): registration@portcityspellslingers.net
+Price: $60 per table; total capacity: 40 tables. These are informational, not a live inventory count.
+
+TEST AFTER DEPLOYMENT:
+1. Open the homepage and select Vendor Registration in the menu.
+2. Confirm price, total table capacity, and mobile layout.
+3. Submit a test request and check Formspree submissions and your receiving mailbox.
+4. Confirm Formspree's post-submission response is satisfactory; configure a custom redirect in Formspree later if desired.
+5. Check your Formspree plan's submission limits before promoting widely.
+
+IMPORTANT: The form does not take payment, hold tables, or dynamically track remaining availability. Table assignments must be approved and tracked manually.
