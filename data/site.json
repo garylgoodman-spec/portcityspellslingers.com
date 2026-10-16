@@ -1,11 +1,11 @@
 {
   "event_date": "2027-01-10",
-  "event_time": "9:00 AM \u2013 5:00 PM",
+  "event_time": "9:00 AM – 5:00 PM",
   "venue": "Moose Lodge #343",
   "address": "4610 Carolina Beach Road, Wilmington, NC 28412",
   "admission_price": 10,
   "vendor_price": 60,
   "total_tables": 40,
-  "confirmed_tables": null,
-  "availability_verified": false
+  "confirmed_tables": 1,
+  "availability_verified": true
 }
