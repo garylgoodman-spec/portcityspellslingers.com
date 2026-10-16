@@ -1,18 +1,1 @@
-// Add your approved image filenames to this list after uploading them to GitHub.
-// Example: {src: 'spellfest-table-01.jpg', alt: 'Vendor display at Spell Fest', caption: 'Vendor displays'}
-const galleryPhotos = [];
-const grid = document.getElementById('gallery-grid');
-if (grid) {
-  if (!galleryPhotos.length) {
-    const note = document.createElement('div'); note.className = 'gallery-empty';
-    note.textContent = 'Our photo gallery is coming soon. Follow our social channels for event highlights!';
-    grid.appendChild(note);
-  } else {
-    galleryPhotos.forEach(photo => {
-      const figure = document.createElement('figure'); figure.className = 'gallery-item';
-      const img = document.createElement('img'); img.src = photo.src; img.alt = photo.alt || 'Spell Fest event photo'; img.loading = 'lazy';
-      const caption = document.createElement('figcaption'); caption.textContent = photo.caption || '';
-      figure.append(img, caption); grid.appendChild(figure);
-    });
-  }
-}
+(async()=>{const grid=document.getElementById('gallery-grid');if(!grid)return;try{const photos=await window.SpellFestData.read('data/gallery.json');if(!Array.isArray(photos)||!photos.length){const n=document.createElement('div');n.className='gallery-empty';n.textContent='Our photo gallery is coming soon. Follow our social channels for event highlights!';grid.append(n);return}for(const photo of photos){if(!photo.src)continue;const figure=document.createElement('figure');figure.className='gallery-item';const img=document.createElement('img');img.src=photo.src;img.alt=photo.alt||'Spell Fest event photo';img.loading='lazy';const caption=document.createElement('figcaption');caption.textContent=photo.caption||'';figure.append(img,caption);grid.append(figure)}}catch(err){const n=document.createElement('p');n.textContent='Gallery temporarily unavailable.';grid.append(n);console.warn(err)}})();

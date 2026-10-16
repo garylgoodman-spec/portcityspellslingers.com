@@ -1,0 +1,51 @@
+media:
+  input: media
+  output: /media
+  rename: safe
+  categories: [image]
+content:
+  - name: site
+    label: Event details and table inventory
+    type: file
+    path: data/site.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - {name: event_date, label: Next event date (YYYY-MM-DD), type: string}
+      - {name: event_time, label: Event hours, type: string}
+      - {name: venue, label: Venue, type: string}
+      - {name: address, label: Street address, type: string}
+      - {name: admission_price, label: Admission price in USD, type: number}
+      - {name: vendor_price, label: Vendor table price in USD, type: number}
+      - {name: total_tables, label: Total vendor tables, type: number}
+      - {name: confirmed_tables, label: Confirmed booked tables (leave empty if unknown), type: number}
+      - {name: availability_verified, label: Publish remaining table count, type: boolean}
+  - name: events
+    label: Calendar events
+    type: file
+    path: data/events.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - {name: date, label: Date (YYYY-MM-DD), type: string, required: true}
+      - {name: title, label: Event title, type: string, required: true}
+      - {name: time, label: Time, type: string}
+      - {name: location, label: Venue and address, type: string}
+      - {name: description, label: Description, type: text}
+      - {name: discord_url, label: Discord event URL, type: string}
+      - {name: topdeck_url, label: TopDeck event URL, type: string}
+  - name: gallery
+    label: Photo gallery
+    type: file
+    path: data/gallery.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - {name: src, label: Photo, type: image, required: true}
+      - {name: alt, label: Accessible photo description, type: string, required: true}
+      - {name: caption, label: Caption, type: string}
