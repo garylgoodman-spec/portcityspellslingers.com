@@ -6,6 +6,6 @@
   "admission_price": 10,
   "vendor_price": 60,
   "total_tables": 40,
-  "confirmed_tables": 1,
+  "confirmed_tables": 2,
   "availability_verified": true
 }
